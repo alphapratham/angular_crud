@@ -33,7 +33,7 @@ router.get('/getAllProducts', async(req, res)=>{
       },
       {
         $project: {
-            _id: 0,
+            _id: 1,
           name: 1,
             price: 1,
             quantity: 1,

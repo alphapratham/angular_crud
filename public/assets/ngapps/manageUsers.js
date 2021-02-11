@@ -29,6 +29,7 @@ app.controller('manageUsersController', ['$scope', '$http', '$uibModal', ($scope
 
     //Method To Delete User
     $scope.deleteUser = (userId, index) => {
+        console.log(userId)
         $http.delete('/deleteUser/' + userId).then((res) => {
             $scope.users.splice(index, 1);
         }).catch((err) => {

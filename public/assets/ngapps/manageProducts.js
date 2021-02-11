@@ -40,6 +40,7 @@ app.controller('manageProductsController', ['$scope', '$http', '$uibModal', ($sc
 
     //Method To Delete Product
     $scope.deleteProduct = (productId, index) => {
+        console.log(productId)
         $http.delete('/deleteProduct/' + productId).then((res) => {
             $scope.products.splice(index, 1);
         }).catch((err) => {
